@@ -1,2 +1,2 @@
 # SpatialMappingNorthStar
-Spatial Mapping on Project North Star
+Spatial Mapping using Structure Core on Project North Star.

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ForceField
+  m_Shader: {fileID: 4800000, guid: 2c1234cc861bc604cbf355a0d79a52b7, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FillTexture:
+        m_Texture: {fileID: 2800000, guid: e35d169d3a412bf46bbb5eee3f5f38a3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_CA2A70D8_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_9472D21C: 0
+    - Vector1_B332AE7F: 2
+    - _ScanSize: 0
+    - _ScanSpeed: 1
+    m_Colors:
+    - Vector3_3545894D: {r: 0, g: 0, b: 0, a: 0}
+    - _FillOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _FillTilling: {r: 30, g: 30, b: 0, a: 0}
+    - _RimColor: {r: 0, g: 0.854902, b: 2, a: 0}
+    - _RimPower: {r: 1, g: 5, b: 0, a: 0}

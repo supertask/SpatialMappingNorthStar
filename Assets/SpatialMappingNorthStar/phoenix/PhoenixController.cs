@@ -18,6 +18,17 @@ public class PhoenixController : MonoBehaviour
 	GameObject bodyObj;
     float turning_rate;
 
+	public class ObstacleAvoidInfo {
+		public Vector3 dir;
+		public float turning_rate;
+		public bool is_hit;
+		public ObstacleAvoidInfo() {
+			this.dir = Vector3.zero;
+			this.turning_rate = 0.0f;
+			this.is_hit = false;
+		}
+	};
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,19 +55,29 @@ public class PhoenixController : MonoBehaviour
         this._noise.Step();
 		Quaternion current_rot = this.transform.rotation;
 
-		Vector3 obstacle_dir = this.GetObstacleAvoidedDir();
+		ObstacleAvoidInfo obs_info = this.GetObstacleAvoidInfo();
+		//Vector3 ex_pos = this.transform.position;
 
-		//Debug.Log("new pos: " + newPos);
-		Quaternion target_rot = this._noise.Rotation(0, 90f, 360f, 90f) * Quaternion.LookRotation(obstacle_dir);
-        float delta = this._stepFrequency * Time.deltaTime;
-		this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, this.turning_rate);
+		float delta = this._stepFrequency * Time.deltaTime;
+		Quaternion target_rot;
+		if (obs_info.is_hit) {
+			target_rot = Quaternion.LookRotation(obs_info.dir);
+			this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, obs_info.turning_rate);
+		}
+		else {
+			target_rot = this._noise.Rotation(0, 90f, 360f, 90f);
+			this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, delta);
+		}
         this.transform.position += this.transform.forward * delta;
 
+
+		//Debug.DrawLine(ex_pos, this.transform.position, Color.blue);
         //Debug.Log("rot: " + this.transform.rotation.eulerAngles);
     }
 
-	private Vector3 GetObstacleAvoidedDir() {
-		Vector3 obstacle_dir = Vector3.zero;
+	private ObstacleAvoidInfo GetObstacleAvoidInfo() {
+		ObstacleAvoidInfo obs_info = new ObstacleAvoidInfo();
+		obs_info.dir = Vector3.zero;
 		RaycastHit hit;
         float hit_distance = float.MaxValue;
 
@@ -64,7 +85,8 @@ public class PhoenixController : MonoBehaviour
                     out hit, this._obstacle_detecting_distance)) {
             if (hit.transform != transform) {
                 Debug.DrawLine(this.transform.position, hit.point, Color.red);
-                obstacle_dir = hit.normal;
+				obs_info.is_hit = true;
+				obs_info.dir = hit.normal;
                 hit_distance = Mathf.Min(hit_distance, Vector3.Distance(this.transform.position, hit.point));
             }
         }
@@ -80,7 +102,8 @@ public class PhoenixController : MonoBehaviour
                     this._obstacle_detecting_distance)) {
             if (hit.transform != transform) {
                 Debug.DrawLine(leftR, hit.point, Color.red);
-				obstacle_dir += hit.normal;
+				obs_info.is_hit = true;
+				obs_info.dir = hit.normal;
                 hit_distance = Mathf.Min(hit_distance, Vector3.Distance(this.transform.position, hit.point));
             }
         }
@@ -89,22 +112,23 @@ public class PhoenixController : MonoBehaviour
                     this._obstacle_detecting_distance)) {
             if (hit.transform != transform) {
                 Debug.DrawLine(rightR, hit.point, Color.red);
-				obstacle_dir += hit.normal;
+				obs_info.is_hit = true;
+				obs_info.dir = hit.normal;
                 hit_distance = Mathf.Min(hit_distance, Vector3.Distance(this.transform.position, hit.point));
             }
         }
         if (0 < hit_distance && hit_distance < this._obstacle_detecting_distance) {
             //Has obstacle objects in the distance
-			this.turning_rate = Util.Remap(hit_distance,
-                       0, this._obstacle_detecting_distance, 1, 0);
+			obs_info.turning_rate = Util.Remap(hit_distance,
+                       0, this._obstacle_detecting_distance, 1, 0); //0~obs -> 1~0
 			Debug.Log("d: " + hit_distance + ", obstacle_dist: " + this._obstacle_detecting_distance + ", turning_rate: " + turning_rate);
         }
         else {
             //No obstacle objects
-            this.turning_rate = Time.deltaTime;
+			obs_info.turning_rate = Time.deltaTime;
         }
 
-		return obstacle_dir;
+		return obs_info;
 	}
 
 }

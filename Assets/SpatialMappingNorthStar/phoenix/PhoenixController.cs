@@ -5,12 +5,15 @@ using Klak.Math;
 
 public class PhoenixController : MonoBehaviour
 {
-    public float timeScale = 0.1f;
-    public float positionScale = 1.0f;
     public float _noiseFrequency = 0.3f;
     public int _randomSeed = 123;
     public float _stepFrequency = 3.0f;
-    public float _obstacle_detecting_distance = 0.5f;
+    public float _obstacle_detecting_distance = 0.3f;
+	private bool is_start_exploring;
+	private float exploring_start_time;
+	private float FLYOUT_END_TIME = 0.4f; //seconds
+	private Vector3 tmpScale;
+	private Quaternion tmpRotation;
 
     Animator anim;
     NoiseGenerator _noise;
@@ -33,49 +36,114 @@ public class PhoenixController : MonoBehaviour
     void Start()
     {
         this.anim = this.GetComponent<Animator>();
-        this.anim.speed = 0.8f;
-        this.anim.Play("Take 001");
+		this.anim.enabled = false;
         this._hash = new XXHash(_randomSeed);
         this._noise = new NoiseGenerator(_randomSeed, _noiseFrequency);
 
+		this.tmpScale = this.transform.localScale;
+		this.tmpRotation = this.transform.rotation;
+		this.transform.localScale = Vector3.zero;
 		this.bodyObj = GameObject.Find(this.name + "/phoenix");
         this.turning_rate = 0.0f;
+		this.exploring_start_time = 0.0f;
+		this.is_start_exploring = false;
+		this.FLYOUT_END_TIME = 0.5f;
 
-		//Debug.Log("remap: 1.2f -> " + Util.Remap(1.2f, 0, 3, 1, 0));
-		//Debug.Log("remap: 0.2f -> " + Util.Remap(0.2f, 0, 3, 1, 0));
-		//Debug.Log("remap: 2.9f -> " + Util.Remap(2.9f, 0, 3, 1, 0));
-		//Debug.Log("remap: 3.5f -> " + Util.Remap(3.5f, 0, 3, 1, 0));
+		//this.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
+		Debug.Log(this.transform.localScale);
     }
 
     // Update is called once per frame
     void Update()
     {
-        this._noise.Frequency = _noiseFrequency;
-        this._noise.Step();
-		Quaternion current_rot = this.transform.rotation;
-
-		ObstacleAvoidInfo obs_info = this.GetObstacleAvoidInfo();
-		//Vector3 ex_pos = this.transform.position;
-
-		float delta = this._stepFrequency * Time.deltaTime;
-		Quaternion target_rot;
-		if (obs_info.is_hit) {
-			target_rot = Quaternion.LookRotation(obs_info.dir);
-			this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, obs_info.turning_rate);
+		if (Input.GetKeyDown(KeyCode.A) && !this.is_start_exploring) {
+			this.is_start_exploring = true;
+			this.anim.enabled = true;
+			this.exploring_start_time = Time.time;
 		}
-		else {
-			target_rot = this._noise.Rotation(0, 90f, 360f, 90f);
-			this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, delta);
-		}
-        this.transform.position += this.transform.forward * delta;
-
-
-		//Debug.DrawLine(ex_pos, this.transform.position, Color.blue);
-        //Debug.Log("rot: " + this.transform.rotation.eulerAngles);
+		this.Explore();
     }
 
-	private ObstacleAvoidInfo GetObstacleAvoidInfo() {
+
+	public void Explore()
+	{
+		if (! this.is_start_exploring) { return; }
+		if ((Time.time - this.exploring_start_time) < this.FLYOUT_END_TIME) {
+			this.AnimFlyout();
+		}
+		else {
+			this.AnimRandomExplore();	
+		}
+	}
+
+	public void AnimFlyout()
+    {
+        this.anim.speed = 0.5f;
+        this.anim.Play("Explore");
+
+		float delta = this._stepFrequency * Time.deltaTime;
+		this.transform.position += 1.5f * this.transform.forward * delta; //bit faster
+		float flyout_time = (Time.time - this.exploring_start_time);
+        float remapped_flyout_time = Util.EaseIn(Util.Remap(flyout_time, 0, this.FLYOUT_END_TIME, 0, 1));
+
+		Debug.Log("Remap: " + Util.Remap(flyout_time, 0, this.FLYOUT_END_TIME, 0, 1));
+
+		//
+        // Scale small to big.
+        //
+		this.transform.localScale = Vector3.Slerp( this.tmpScale * 0.1f, this.tmpScale, remapped_flyout_time);
+
+        //
+        // Rotate 360 degree.
+		// Quaternion.Slerp works only until 180 degrees. So it is separated.
+        //
+		if (remapped_flyout_time < 0.5f) {
+            this.transform.rotation = Quaternion.Slerp(
+				this.tmpRotation,
+				this.tmpRotation * Quaternion.Euler(0, 0, 180),
+				remapped_flyout_time);
+		}
+		else {
+			this.transform.rotation = Quaternion.Slerp(
+				this.tmpRotation * Quaternion.Euler(0, 0, 180),
+                this.tmpRotation * Quaternion.Euler(0, 0, 360),
+                remapped_flyout_time);
+		}
+    }
+
+
+	public void AnimRandomExplore()
+	{
+		this.anim.speed = 0.8f;
+		this.anim.Play("Explore");
+		this._noise.Frequency = _noiseFrequency;
+        this._noise.Step();
+        Quaternion current_rot = this.transform.rotation;
+
+        ObstacleAvoidInfo obs_info = this.GetObstacleAvoidInfo();
+        //Vector3 ex_pos = this.transform.position;
+
+        float delta = this._stepFrequency * Time.deltaTime;
+        Quaternion target_rot;
+        if (obs_info.is_hit)
+        {
+            target_rot = Quaternion.LookRotation(obs_info.dir);
+            this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, obs_info.turning_rate);
+        }
+        else
+        {
+            target_rot = this._noise.Rotation(0, 90f, 360f, 90f);
+            this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, delta);
+        }
+        this.transform.position += this.transform.forward * delta;
+
+        //Debug.DrawLine(ex_pos, this.transform.position, Color.blue);
+        //Debug.Log("rot: " + this.transform.rotation.eulerAngles);
+	}
+
+	private ObstacleAvoidInfo GetObstacleAvoidInfo()
+	{
 		ObstacleAvoidInfo obs_info = new ObstacleAvoidInfo();
 		obs_info.dir = Vector3.zero;
 		RaycastHit hit;
@@ -121,7 +189,7 @@ public class PhoenixController : MonoBehaviour
             //Has obstacle objects in the distance
 			obs_info.turning_rate = Util.Remap(hit_distance,
                        0, this._obstacle_detecting_distance, 1, 0); //0~obs -> 1~0
-			Debug.Log("d: " + hit_distance + ", obstacle_dist: " + this._obstacle_detecting_distance + ", turning_rate: " + turning_rate);
+			//Debug.Log("d: " + hit_distance + ", obstacle_dist: " + this._obstacle_detecting_distance + ", turning_rate: " + turning_rate);
         }
         else {
             //No obstacle objects

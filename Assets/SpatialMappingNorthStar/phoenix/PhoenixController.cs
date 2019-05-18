@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using Klak.Math;
 
+enum State {
+	START_FLYING, EXPLORING, END_FLYING,
+};
+
 public class PhoenixController : MonoBehaviour
 {
     public float _noiseFrequency = 0.3f;
     public int _randomSeed = 123;
     public float _stepFrequency = 3.0f;
     public float _obstacle_detecting_distance = 0.3f;
-	private bool is_start_exploring;
+	private bool exploring_on;
 	private float exploring_start_time;
+	private float exploring_ending_time;
 	private float FLYOUT_END_TIME = 0.4f; //seconds
+	private float FLYBACK_END_TIME = 0.4f; //seconds
 	private Vector3 tmpScale;
 	private Quaternion tmpRotation;
 
@@ -46,7 +52,8 @@ public class PhoenixController : MonoBehaviour
 		this.bodyObj = GameObject.Find(this.name + "/phoenix");
         this.turning_rate = 0.0f;
 		this.exploring_start_time = 0.0f;
-		this.is_start_exploring = false;
+		this.exploring_ending_time = 0.0f;
+		this.exploring_on = false;
 		this.FLYOUT_END_TIME = 0.5f;
 
 		//this.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
@@ -57,27 +64,46 @@ public class PhoenixController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.A) && !this.is_start_exploring) {
-			this.is_start_exploring = true;
-			this.anim.enabled = true;
-			this.exploring_start_time = Time.time;
-		}
-		this.Explore();
+		this.Fly();
     }
 
 
-	public void Explore()
+	public void Fly()
 	{
-		if (! this.is_start_exploring) { return; }
-		if ((Time.time - this.exploring_start_time) < this.FLYOUT_END_TIME) {
-			this.AnimFlyout();
+        // Switch for flying
+		if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (exploring_on)
+            {
+                //End action
+                this.exploring_on = false;
+                this.anim.enabled = false;
+                this.exploring_ending_time = Time.time;
+            }
+            else
+            {
+                //Start action
+                this.exploring_on = true;
+                this.anim.enabled = true;
+                this.exploring_start_time = Time.time;
+            }
+        }
+
+
+        if (this.exploring_on) {
+            if ((Time.time - this.exploring_start_time) < this.FLYOUT_END_TIME) {
+                this.StartFlying();
+            }
+			else {
+				this.Explore(); 
+			}
 		}
 		else {
-			this.AnimRandomExplore();	
+			this.EndFlying();
 		}
 	}
 
-	public void AnimFlyout()
+	public void StartFlying()
     {
         this.anim.speed = 0.5f;
         this.anim.Play("Explore");
@@ -86,8 +112,6 @@ public class PhoenixController : MonoBehaviour
 		this.transform.position += 1.5f * this.transform.forward * delta; //bit faster
 		float flyout_time = (Time.time - this.exploring_start_time);
         float remapped_flyout_time = Util.EaseIn(Util.Remap(flyout_time, 0, this.FLYOUT_END_TIME, 0, 1));
-
-		Debug.Log("Remap: " + Util.Remap(flyout_time, 0, this.FLYOUT_END_TIME, 0, 1));
 
 		//
         // Scale small to big.
@@ -112,8 +136,11 @@ public class PhoenixController : MonoBehaviour
 		}
     }
 
+	public void EndFlying()
+	{
+	}
 
-	public void AnimRandomExplore()
+	public void Explore()
 	{
 		this.anim.speed = 0.8f;
 		this.anim.Play("Explore");

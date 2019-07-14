@@ -267,6 +267,7 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 1
     m_Colors:
+    - Color_66B3BAC4: {r: 1, g: 0.3820755, b: 0.3820755, a: 0}
     - Color_68C29D40: {r: 0, g: 0.75449467, b: 1, a: 0}
     - _BaseColor: {r: 0, g: 0.5947547, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}

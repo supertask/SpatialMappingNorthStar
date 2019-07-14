@@ -22,7 +22,7 @@ namespace Leap.Unity.AR {
     MeshDeformer calibrationMesh;
     Vector3 curMousePosition, lastMousePosition;
     int closestVertex = -1;
-    Vector2 screen = new Vector3(2160, 1200);
+    Vector2 screen = new Vector3(2880, 1600);
 
     void Start() {
       if (!enabled) { return; }

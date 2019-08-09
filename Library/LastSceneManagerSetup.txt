@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/SpatialMappingNorthStar/NewSpatialMappingNorthStar.unity
+- path: Assets/SpatialMappingNorthStar/Bird.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

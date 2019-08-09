@@ -1,6 +1,82 @@
-Base path: C:/Program Files/Unity/Hub/Editor/2019.1.3f1/Editor/Data
+Base path: C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=32209 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=62285 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=34997 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=41945 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=32353 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=47657 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=30665 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=56309 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=15475 outsize=67117 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=25750 outsize=14253 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=25750 outsize=16221 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1042 outsize=3157 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1176 outsize=781 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=9347 outsize=7569 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=9347 outsize=9273 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=17415 outsize=10549 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4855 outsize=5437 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6309 outsize=5041 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3396 outsize=2581 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7423 outsize=6497 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2889 outsize=1909 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=11249 outsize=3901 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=8553 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=10549 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=21453 outsize=14621 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=8635 outsize=4721 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=857 outsize=573 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=35006 outsize=34605 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=35006 outsize=31641 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=17691 outsize=7957 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5089 outsize=1361 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5089 outsize=929 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7712 outsize=4517 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3918 outsize=2657 ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=10668 outsize=4246 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=0 insize=7060 outsize=810 kw=_NORMALMAP_TANGENT_SPACE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=11609 outsize=3994 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  error: 1 plat 4 at (1467): implicit truncation of vector type\nCompiling Vertex program with DECALS_3RT SHADOW_LOW
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at (1468): implicit truncation of vector type\nCompiling Vertex program with DECALS_3RT SHADOW_LOW
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at (1469): implicit truncation of vector type\nCompiling Vertex program with DECALS_3RT SHADOW_LOW
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=26619 outsize=1702 kw=DECALS_3RT SHADOW_LOW pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7060 outsize=606 kw=_ALPHATEST_ON _DOUBLESIDED_ON _NORMALMAP_TANGENT_SPACE _NORMALMAP _EMISSIVE_COLOR_MAP _ENABLE_GEOMETRIC_SPECULAR_AA pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1

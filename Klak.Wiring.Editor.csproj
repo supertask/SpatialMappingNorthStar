@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D590309D-7503-63CD-0D20-1CBD7F8B5D67}</ProjectGuid>
+    <ProjectGuid>{BC70973E-4C40-37E2-5071-DD3032394353}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Klak.Wiring.Editor</AssemblyName>
@@ -315,28 +315,34 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="InteractionEngineUtility">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Assets/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
     </Reference>
-    <Reference Include="StructureSharp">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Assets/Plugins/StructureCore/origin/StructureSharp.dll</HintPath>
+    <Reference Include="OpenCvSharp.Blob">
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/LeapMotion/North Star/Plugins/net461/OpenCvSharp.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp">
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/LeapMotion/North Star/Plugins/net461/OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Intel.RealSense">
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/RealSenseSDK2.0/Plugins/Intel.RealSense.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.render-pipelines.high-definition@5.10.0-preview/Editor/Core/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.render-pipelines.high-definition@5.10.0-preview/Editor/Core/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -695,7 +701,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Klak.Wiring.csproj">
-      <Project>{7ED7B530-0EB2-5F92-1810-89DD3972CB95}</Project>
+      <Project>{B0B61CF0-0B97-39C6-F681-24D8A60A7BD2}</Project>
       <Name>Klak.Wiring</Name>
     </ProjectReference>
   </ItemGroup>

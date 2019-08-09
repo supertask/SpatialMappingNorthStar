@@ -163,7 +163,7 @@ public class PhoenixController : MonoBehaviour
             target_rot = this._noise.Rotation(0, 90f, 360f, 90f);
             this.transform.rotation = Quaternion.Slerp(current_rot, target_rot, delta);
         }
-        this.transform.position += this.transform.forward * delta;
+        this.transform.position += 0.8f * this.transform.forward * delta;
 
         //Debug.DrawLine(ex_pos, this.transform.position, Color.blue);
         //Debug.Log("rot: " + this.transform.rotation.eulerAngles);

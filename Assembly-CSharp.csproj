@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{542A641E-B3DC-CC2F-1E80-D43609137ACC}</ProjectGuid>
+    <ProjectGuid>{D52ECA9C-520A-54E0-4B0B-3002260C8C5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,264 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\ProjectionPostProcessProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Arm.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Bone.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\CircularObjectBuffer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Config.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Connection.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Controller.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\CopyFromLeapCExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\CopyFromOtherExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\CSharpExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Device.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\DeviceList.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\DistortionData.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Events.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\FailedDevice.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\FailedDeviceList.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Finger.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Frame.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Hand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\IController.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Image.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\ImageData.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\LeapC.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\LeapQuaternion.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\LeapTransform.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Logger.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Matrix.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\MemoryManager.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\MessageSeverity.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\PointMapping.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\StructMarshal.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\TransformExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Vector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Algorithms\SlidingMax.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Algorithms\SmoothedFloat.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Algorithms\SmoothedQuaternion.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Algorithms\SmoothedVector3.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\CubicHermiteSpline\HermiteSpline.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\CubicHermiteSpline\HermiteSpline2.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\CubicHermiteSpline\HermiteSpline3.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Ease.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\IValueProxy.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\TransformTweenBehaviour.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Enums.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\IInterpolator.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Internal\Interpolators\InterpolatorBases.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Internal\Interpolators\MaterialInterpolators.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Internal\Interpolators\TransformInterpolators.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Internal\Interpolators\ValueInterpolators.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Internal\TweenInstance.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Internal\TweenRunner.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Tween\Tween.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attachments\AttachmentHand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attachments\AttachmentHandEnableDisable.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attachments\AttachmentHands.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attachments\AttachmentPointBehaviour.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attachments\AttachmentPointFlags.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\AutoFind.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\CombinablePropertyAttribute.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\CurveBounds.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\Disable.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\DisableIf.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\EditTimeOnly.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\EnumFlags.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\ImplementsInterface.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\ImplementsTypeNameDropdown.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\Incrementable.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\InspectorName.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\MaxValue.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\MinMax.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\MinValue.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\OnEditorChange.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\QuickButton.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\RunTimeOnly.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\Units.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\AssetFolder.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\DelayBuffer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\DeltaBuffer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Deque.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Either.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Hash.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\IIndexable.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\IIndexableStruct.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Maybe.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\MinHeap.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\MultiTypedList.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\MultiTypedReference.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Pool.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Pose.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\ProduceConsumeBuffer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\ReadonlyHashSet.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\ReadonlyList.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\ReadonlySlice.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\RingBuffer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\SerializableDictionary.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\SerializableHashSet.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\SerializableType.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Slice.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\StreamingAsset.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\StreamingFolder.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Type.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\AbstractHoldDetector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\Detector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\DetectorLogicGate.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\ExtendedFingerDetector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\FingerDirectionDetector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\PalmDirectionDetector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\PinchDetector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\ProximityDetector.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\EditorTools\LeapPreferences.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\EditorTools\LeapProjectChecks.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Encoding\VectorHand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\HandModelManager.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\HandRepresentation.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\CapsuleHand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\DebugHand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\FingerModel.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\HandDrop.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\HandEnableDisable.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\HandModel.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\HandModelBase.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\HandTransitionBehavior.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\RiggedFinger.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\RiggedHand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\RigidFinger.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\RigidHand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\SkeletalFinger.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\SkeletalHand.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Hands\TestHandFactory.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\LeapImageRetriever.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\LeapProfiling.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\LeapProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\LeapServiceProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\LeapTestProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\LeapXRServiceProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Query\Query.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Query\QueryCollapseExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Query\QueryOperatorExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Query\QueryValueGenerators.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Space\Definitions\LeapCylindricalSpace.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Space\Definitions\LeapRadialSpace.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Space\Definitions\LeapSphericalSpace.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Space\ISpaceComponent.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Space\ITransformer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Space\LeapSpace.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Space\LeapSpaceAnchor.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Testing\LeapTestBase.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Testing\StationaryTestLeapProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\AnimationCurveUtil.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\ArrayPool.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\AssertHelper.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\BitConverterNonAlloc.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Comment.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\ConnectionMonitor.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\DisconnectionNotice.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\EditorResources.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\EnableDepthBuffer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Enum.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\EnumEventTable.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\ExecutionOrder.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\FpsLabel.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\FrameRateControls.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\GuiRectUtil.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\HandUtils.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Infix.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\InternalUtility.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\KeyEnableBehaviors.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\KeyEnableGameObjects.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\LeapColor.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\LeapUnityExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\ListAndArrayExtensions.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\PostProcessProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\ProfilerSample.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\ProgressBar.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\RuntimeColliderGizmos.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\RuntimeGizmoManager.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\RuntimeGizmoToggle.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\SingleLayer.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Swizzle.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\TransformHistory.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\TransformUtil.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Utils.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\XRSupportUtil.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\XR\LeapEyeDislocator.cs" />
-    <Compile Include="Assets\LeapMotion\Core\Scripts\XR\XRHeightOffset.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\2. Basic UI\MovePoseExample.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\3. Interaction Callbacks\Scripts\TransformHandle.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\3. Interaction Callbacks\Scripts\TransformRotationHandle.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\3. Interaction Callbacks\Scripts\TransformTool.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\3. Interaction Callbacks\Scripts\TransformTranslationHandle.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\5. Anchors\SimpleAnchorFeedback.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\6. Dynamic UI\Scripts\SimpleMatchAnchorScaleAndState.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\6. Dynamic UI\Scripts\WorkstationBehaviourExample.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\6. Dynamic UI\Tests\Scripts\RenderWireSphere.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\6. Dynamic UI\Tests\Scripts\WorkstationPoseTest.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\7. Moving Reference Frames\Scripts\AngularSpeedTextBehaviour.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\7. Moving Reference Frames\Scripts\AutopilotSystem.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\7. Moving Reference Frames\Scripts\LinearReferenceSpawner.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\7. Moving Reference Frames\Scripts\LinearSpeedTextBehaviour.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\7. Moving Reference Frames\Scripts\Spaceship.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\8. Swap Grasp\Scripts\SwapGraspExample.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\Common Example Assets\Scripts\SimpleFacingCameraCallbacks.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\Common Example Assets\Scripts\SimpleInteractionEmission.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\Common Example Assets\Scripts\SimpleInteractionGlow.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\Common Example Assets\Scripts\SimpleRendererUtil.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\Common Example Assets\Scripts\SimpleScaleUtil.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Examples\Common Example Assets\Scripts\SimpleTransformUtil.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\InteractionBehaviour.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\InteractionController.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\InteractionHand.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\InteractionManager.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\InteractionXRController.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\ContactBone.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\ContactBoneParent.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\DefaultXRNodeTrackingProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\HeuristicGrabClassifier.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\Interface\IGraspedMovementHandler.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\Interface\IGraspedPoseHandler.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\Interface\IInteractionBehaviour.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\Interface\IInternalInteractionController.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\Interface\IInternalInteractionManager.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\Interface\IThrowHandler.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\IXRControllerTrackingProvider.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\KabschGraspedPose.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\KinematicGraspedMovement.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\NonKinematicGraspedMovement.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Internal\SlidingWindowThrow.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\UI\Anchors\Anchor.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\UI\Anchors\AnchorableBehaviour.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\UI\Anchors\AnchorGroup.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\UI\Anchors\Tests\AnchorScoreTest.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\UI\InteractionButton.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\UI\InteractionSlider.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\UI\InteractionToggle.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\ActivityManager.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\Extensions.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\GraspedMovementEvent.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\HideInteractionHandWhenControllerMoving.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\IgnoreColliderForInteraction.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\IgnoreCollisionsInChildren.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\KabschSolver.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\PhysicsCallbacks.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Testing\Scripts\InteractionEngineTestBase.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Testing\Scripts\TestInteractionStateColor.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Testing\Scripts\Tests\CreationAndDeletionTests.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Testing\Scripts\Tests\GraspingAPITests.cs" />
-    <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Testing\Scripts\Tests\InteractionButtonTests.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\ARRaytracer.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\CalibrationDeformer.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\EllipsoidTransform.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\ForceAspectRatio.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\IPDAdjuster.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\KeyCodeChildToggle.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\LeapDeviceTracking.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\MeshDeformer.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\SerializedCalibration.cs" />
-    <Compile Include="Assets\LeapMotion\North Star\Scripts\WindowOffsetManager.cs" />
     <Compile Include="Assets\SpatialMappingNorthStar\HandUtil.cs" />
     <Compile Include="Assets\SpatialMappingNorthStar\phoenix\Curl.cs" />
     <Compile Include="Assets\SpatialMappingNorthStar\phoenix\Perlin.cs" />
@@ -327,100 +69,87 @@
     <Compile Include="Assets\SpatialMappingNorthStar\phoenix\Sample.cs" />
     <Compile Include="Assets\SpatialMappingNorthStar\phoenix\Simplex.cs" />
     <Compile Include="Assets\SpatialMappingNorthStar\phoenix\Util.cs" />
-    <Compile Include="Assets\SpatialMappingNorthStar\UVGenerator.cs" />
-    <None Include="Assets\LeapMotion\Core\Resources\LeapCG.cginc" />
-    <None Include="Assets\LeapMotion\Core\README_BEFORE_UPDATING.txt" />
-    <None Include="Assets\LeapMotion\North Star\Materials\EyePorts\Shaders\TwoSidedUnlit.shader" />
-    <None Include="Assets\LeapMotion\Core\readme.txt" />
-    <None Include="Assets\LeapMotion\Core\Shaders\RuntimeGizmos.shader" />
-    <None Include="Assets\LeapMotion\North Star\Materials\EyePorts\Shaders\Culling_Off.shader" />
-    <None Include="Assets\LeapMotion\Core\Dependencies.txt" />
-    <None Include="Assets\LeapMotion\Core\Shaders\ThresholdOverlay.shader" />
-    <None Include="Assets\LeapMotion\Core\Shaders\PassthroughForeground.shader" />
-    <None Include="Assets\LeapMotion\Core\Shaders\PassthroughBackground.shader" />
     <None Include="Assets\common\VFXSettingsForNorthStar\ConvertedCullingOff.shader" />
-    <None Include="Assets\LeapMotion\Core\Version.txt" />
-    <None Include="Assets\LeapMotion\Core\Shaders\VertexOffsetShader.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Lightweight.Runtime">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Lightweight.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -606,19 +335,25 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="InteractionEngineUtility">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Assets/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
     </Reference>
-    <Reference Include="StructureSharp">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Assets/Plugins/StructureCore/origin/StructureSharp.dll</HintPath>
+    <Reference Include="OpenCvSharp.Blob">
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/LeapMotion/North Star/Plugins/net461/OpenCvSharp.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp">
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/LeapMotion/North Star/Plugins/net461/OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Intel.RealSense">
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Assets/Plugins/RealSenseSDK2.0/Plugins/Intel.RealSense.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/light/tmp/SpatialMappingNorthStar2019/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/light/Projects/SpatialMappingNorthStar/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -968,35 +703,43 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F4E2FB61-ABC9-7CC1-100E-6130AB4F9AD1}</Project>
+      <Project>{6DB0703E-3B09-191A-1F1D-3F0A2DAB15ED}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Klak.Math.csproj">
-      <Project>{6CD04F04-E8EF-6A77-44A1-22BA4DE30348}</Project>
+      <Project>{3F00F279-5F15-9BB8-89A8-C4B2139173A1}</Project>
       <Name>Klak.Math</Name>
     </ProjectReference>
     <ProjectReference Include="Klak.Wiring.csproj">
-      <Project>{7ED7B530-0EB2-5F92-1810-89DD3972CB95}</Project>
+      <Project>{B0B61CF0-0B97-39C6-F681-24D8A60A7BD2}</Project>
       <Name>Klak.Wiring</Name>
     </ProjectReference>
     <ProjectReference Include="Klak.Math.Editor.csproj">
-      <Project>{BD3C9452-8860-EA5B-5E7A-FEE7BD1B7330}</Project>
+      <Project>{EEA5E8B5-DA75-0C72-AD52-635E49B2C71B}</Project>
       <Name>Klak.Math.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Klak.Extensions.csproj">
-      <Project>{7D04C707-E049-6CF7-8992-2749B13576F2}</Project>
+      <Project>{879F7FFC-BDD8-1735-7FF4-07CE33768920}</Project>
       <Name>Klak.Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="Klak.Motion.csproj">
-      <Project>{A40DEBE4-29FF-7169-A2F2-B47A8F1DDCA4}</Project>
+      <Project>{1543BA3A-423D-9AD4-6360-C6AB317D8B6C}</Project>
       <Name>Klak.Motion</Name>
     </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{001F1C34-DC1C-3030-1C91-271A8F8B7494}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="RealSense.csproj">
+      <Project>{C3E7970C-C07C-232B-0495-B985DE770868}</Project>
+      <Name>RealSense</Name>
+    </ProjectReference>
     <ProjectReference Include="Klak.Motion.Editor.csproj">
-      <Project>{9D353FEE-42A7-1C18-C4D1-7B7730A5C41B}</Project>
+      <Project>{B07081E9-6ADC-08C4-DFBE-7EABBF71BB94}</Project>
       <Name>Klak.Motion.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Klak.Wiring.Editor.csproj">
-      <Project>{D590309D-7503-63CD-0D20-1CBD7F8B5D67}</Project>
+      <Project>{BC70973E-4C40-37E2-5071-DD3032394353}</Project>
       <Name>Klak.Wiring.Editor</Name>
     </ProjectReference>
   </ItemGroup>

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Klak.Math;
+using Leap;
+using Leap.Unity;
 
 enum State {
 	START_FLYING, EXPLORING, END_FLYING,
@@ -13,13 +15,18 @@ public class PhoenixController : MonoBehaviour
     public int _randomSeed = 123;
     public float _stepFrequency = 3.0f;
     public float _obstacle_detecting_distance = 0.3f;
-	private bool exploring_on;
+    public Transform player;
+    public GameObject leapProviderObj;
+
+    private bool exploring_on;
 	private float exploring_start_time;
 	private float exploring_ending_time;
 	private float FLYOUT_END_TIME = 0.4f; //seconds
 	private float FLYBACK_END_TIME = 0.4f; //seconds
 	private Vector3 tmpScale;
 	private Quaternion tmpRotation;
+    private LeapServiceProvider m_Provider;
+    private HandUtil handUtil;
 
     Animator anim;
     NoiseGenerator _noise;
@@ -56,9 +63,12 @@ public class PhoenixController : MonoBehaviour
 		this.exploring_on = false;
 		this.FLYOUT_END_TIME = 0.5f;
 
-		//this.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        this.m_Provider = this.leapProviderObj.GetComponent<LeapServiceProvider>();
+        this.handUtil = new HandUtil(player);
 
-		Debug.Log(this.transform.localScale);
+        //this.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+        Debug.Log(this.transform.localScale);
     }
 
     // Update is called once per frame
@@ -67,32 +77,35 @@ public class PhoenixController : MonoBehaviour
 		this.Fly();
     }
 
-
 	public void Fly()
 	{
-        // Switch for flying
-		if (Input.GetKeyDown(KeyCode.A))
-        {
-            if (exploring_on)
-            {
-                //End action
-                this.exploring_on = false;
-                this.anim.enabled = false;
-                this.exploring_ending_time = Time.time;
-            }
-            else
-            {
-                //Start action
-                this.exploring_on = true;
-                this.anim.enabled = true;
-                this.exploring_start_time = Time.time;
-            }
-        }
+        Frame frame = this.m_Provider.CurrentFrame;
+        Hand[] hands = HandUtil.GetCorrectHands(frame); //0=LEFT, 1=RIGHT
 
+        Hand leftHand = hands[HandUtil.LEFT];
+        Hand rightHand = hands[HandUtil.RIGHT];
+        bool isJustOpenedLeftHand = this.handUtil.JustOpenedHandOn(hands, HandUtil.LEFT);
+        bool isJustOpenedRightHand = this.handUtil.JustOpenedHandOn(hands, HandUtil.RIGHT);
+
+        // Switch for flying
+        if (isJustOpenedLeftHand && !exploring_on) {
+            //Start action
+            this.exploring_on = true;
+            this.anim.enabled = true;
+            this.exploring_start_time = Time.time;
+            this.transform.position = HandUtil.ToVector3(leftHand.PalmPosition);
+            //HandUtil.ToVector3(leftHand.PalmPosition);
+        }
+        else if (isJustOpenedRightHand && exploring_on) {
+            //End action
+            this.exploring_on = false;
+            this.anim.enabled = false;
+            this.exploring_ending_time = Time.time;
+        }
 
         if (this.exploring_on) {
             if ((Time.time - this.exploring_start_time) < this.FLYOUT_END_TIME) {
-                this.StartFlying();
+                this.StartFlying(leftHand);
             }
 			else {
 				this.Explore(); 
@@ -103,13 +116,14 @@ public class PhoenixController : MonoBehaviour
 		}
 	}
 
-	public void StartFlying()
+
+	public void StartFlying(Hand hand)
     {
         this.anim.speed = 0.5f;
         this.anim.Play("Explore");
 
 		float delta = this._stepFrequency * Time.deltaTime;
-		this.transform.position += 1.5f * this.transform.forward * delta; //bit faster
+		this.transform.position += 3.0f * HandUtil.ToVector3(hand.PalmNormal) * delta; //bit faster
 		float flyout_time = (Time.time - this.exploring_start_time);
         float remapped_flyout_time = Util.EaseIn(Util.Remap(flyout_time, 0, this.FLYOUT_END_TIME, 0, 1));
 

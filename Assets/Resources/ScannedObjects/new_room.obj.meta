@@ -1,32 +1,8 @@
 fileFormatVersion: 2
-guid: 99dc84d7e0deabf4ab2071627383ef91
+guid: 0840b086a57a51940b50a76a9a233772
 ModelImporter:
   serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: default
-  - first:
-      1: 100002
-    second: //RootNode
-  - first:
-      4: 400000
-    second: default
-  - first:
-      4: 400002
-    second: //RootNode
-  - first:
-      21: 2100000
-    second: defaultMat
-  - first:
-      23: 2300000
-    second: default
-  - first:
-      33: 3300000
-    second: default
-  - first:
-      43: 4300000
-    second: default
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -55,7 +31,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1

@@ -4,6 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+StructureCore
+*.pcache
 
 # Visual Studio cache directory
 .vs/

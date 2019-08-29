@@ -45,17 +45,14 @@ public class RoomMapper : MonoBehaviour
     public string mappedJsonName = "pack.json";
 
     public static readonly string SCENE_NAME = "RoomMapper";
-    //public string SCANNED_OBJ_PATH ;
-    public string MAPPED_OBJECTS_PACK_PATH;
-
     public static readonly string CUBE_PREFIX = "Cube";
 
+    private string MAPPED_OBJECTS_PACK_PATH;
     private int selectingIndex;
     private MappedObjectsPack pack;
 
     void Start()
     {
-        //this.SCANNED_OBJ_PATH = Application.dataPath + "/Resources/ScannedObjects/";
         this.MAPPED_OBJECTS_PACK_PATH = Application.dataPath + "/Resources/MappedObjectsPack/";
         this.selectingIndex = 0;
         this.Load();
@@ -197,10 +194,14 @@ public class RoomMapper : MonoBehaviour
      */
     public void Load()
     {
-        bool is_shown_map = (SceneManager.GetActiveScene().name == RoomMapper.SCENE_NAME);
-
         string packPath = this.MAPPED_OBJECTS_PACK_PATH + this.mappedJsonName;
+        if (!File.Exists(packPath)) {
+            Debug.Log("File " + packPath + " doesn't exist.");
+            return;
+        }
         string allText = File.ReadAllText(packPath);
+        Debug.Log("File " + packPath + " is loaded.");
+
         this.pack = MappedObjectsPack.CreateFromJSON(allText);
 
         Dictionary<string, GameObject> mappingObjs = this.GetMappingObjects();

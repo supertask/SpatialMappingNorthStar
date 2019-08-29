@@ -23,13 +23,12 @@ public class VoronoiRoomAnim : MonoBehaviour
         mat.SetVector("_Center", objCenter);
     }
 
-    // Update is called once per frame
+    /*
     void Update()
     {
         if (this.distanceTimer.OnTime()) {
             this.distance = 0;
         }
-
 
         //アニメーション中のとき(待ちタイマーが始まってないとき)
         if (! this.distanceTimer.isStarted) {
@@ -43,5 +42,12 @@ public class VoronoiRoomAnim : MonoBehaviour
         }
 
         this.distanceTimer.Clock();
+    }
+    */
+
+    void Update()
+    {
+        mat.SetFloat("_Distance", this.distance);
+        this.distance+=speed;
     }
 }

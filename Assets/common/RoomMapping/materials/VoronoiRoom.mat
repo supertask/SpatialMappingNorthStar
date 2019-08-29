@@ -138,6 +138,9 @@ Material:
     - _RipplersSpeed: 1.78
     - _ScanSize: 0
     - _ScanSpeed: 1
+    - _SineWaveAmplitude: 5
+    - _SineWaveAmplitudeOffset: -0.7
+    - _SineWaveLength: 2
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -164,7 +167,7 @@ Material:
     - Color_E5206ED2: {r: 0, g: 1.1960078, b: 1.597465, a: 0}
     - Vector2_9FF9D83F: {r: 5, g: 5, b: 0, a: 0}
     - Vector3_288A1601: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0, g: 1.8638742, b: 3.9999995, a: 1}
+    - _BaseColor: {r: 0, g: 1.3327671, b: 2.828428, a: 1}
     - _Center: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

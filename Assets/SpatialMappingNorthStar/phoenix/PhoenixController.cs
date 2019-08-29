@@ -61,7 +61,7 @@ public class PhoenixController : MonoBehaviour
 		this.exploring_start_time = 0.0f;
 		this.exploring_ending_time = 0.0f;
 		this.exploring_on = false;
-		this.FLYOUT_END_TIME = 0.5f;
+		this.FLYOUT_END_TIME = 0.6f;
 
         this.m_Provider = this.leapProviderObj.GetComponent<LeapServiceProvider>();
         this.handUtil = new HandUtil(player);
@@ -123,7 +123,7 @@ public class PhoenixController : MonoBehaviour
         this.anim.Play("Explore");
 
 		float delta = this._stepFrequency * Time.deltaTime;
-		this.transform.position += 1.2f * HandUtil.ToVector3(hand.PalmNormal) * delta; //bit faster
+		this.transform.position += 0.6f * hand.PalmNormal.ToVector3() * delta; //bit faster
 		float flyout_time = (Time.time - this.exploring_start_time);
         float remapped_flyout_time = Util.EaseIn(Util.Remap(flyout_time, 0, this.FLYOUT_END_TIME, 0, 1));
 
